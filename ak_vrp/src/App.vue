@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HeaderComp/>
+    <DistanceCalc/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComp from './components/HeaderComp.vue'
+import DistanceCalc from './components/DistanceCalc.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeaderComp,
+    DistanceCalc
   }
 }
 </script>
@@ -24,5 +26,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-image:url('https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif');
+  background-repeat:repeat;
+  height: 100rem;
 }
 </style>
