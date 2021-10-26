@@ -5,9 +5,12 @@
             </p>
             <form>
                 <select name="ShellDPn" id="ShellDPn">
-                    <option value="KLm" id="KL_MU" selected="selected"></option>
-                    <option value="OBm" id="OB_MU"></option>
-                    <option value="MLm" id="ML_MU"></option>
+                    <option value="KLm" id="KV_AC" selected="selected">{{STA1[0]}}</option>
+                    <option value="OBm" id="OB_MU">{{STA1[1]}}</option>
+                    <option value="MLm" id="ML_MU">{{STA1[2]}}</option>
+                    <option value="MLm2" id="ML_MU2">{{STA1[3]}}</option>
+                    <option value="MLm3" id="ML_MU3">{{STA1[4]}}</option>
+                    <option value="MLm4" id="ML_MU4">{{STA1[5]}}</option>
                 </select>
             </form>
             <button v-on:click="Calc_Distance" id="Calc_Btn">Calculate</button>
@@ -24,12 +27,8 @@ export default {
   data () {
     return {
       distance: 7,
-      kv2_ac: 'G-530 (AC) - The Anti-Concrete',
-      STA1: ['152mm G-530 (AC) - The Anti-Concrete', '88mm', '128mm'],
-      document.getElementById("KL_MU").innerHTML = STA1[0],
-      document.getElementById("OB_MU").innerHTML = STA1[1],
-      document.getElementById("ML_MU").innerHTML = STA1[2],
-      gei_kv2_ac: document.getElementById('hello').outerHTML
+      STA1: ['152mm G-530 - The Anti-Concrete', '88mm (PzGr 39/43) - APCBC', '128mm 12,8/8,8 Pzgr.TS - APCBC', '120mm T14E3 - APCBC', '120mm DM43 - APFSDS', '120mm 3BK18M - HEATFS'],
+      gei_kv2_ac: document.getElementById('KV_AC')
     }
   },
   methods: {
