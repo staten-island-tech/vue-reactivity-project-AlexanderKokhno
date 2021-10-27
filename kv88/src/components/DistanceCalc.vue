@@ -22,6 +22,15 @@
             </div>
             <!-- <button v-on:click="Calc_Distance" id="Calc_Btn">Calculate2</button> -->
         </div>
+        <div id="demoDiv">
+          <img alt="Vue logo" id="DDKV" v-if="selected === '400'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+          <img alt="Vue logo" id="DDKT" v-else-if="selected === '1000'" Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
+          <img alt="Vue logo" id="DDSP" v-else-if="selected === '1100'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+          <img alt="Vue logo" id="DDT34" v-else-if="selected === '950'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+          <img alt="Vue logo" id="DDPL" v-else-if="selected === '1600'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+          <img alt="Vue logo" id="DDT80" v-else-if="selected === '1300'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+        </div>
+
     </div>
 </template>
 
@@ -55,23 +64,23 @@ export default {
         },
         {
           name: '88mm (PzGr 39/43) - APCBC',
-          value: '300'
+          value: '1000'
         },
         {
           name: '128mm 12,8/8,8 Pzgr.TS - APCBC',
-          value: '200'
+          value: '1100'
         },
         {
           name: '120mm T14E3 - APCBC',
-          value: '290'
+          value: '950'
         },
         {
           name: '120mm DM43 - APFSDS',
-          value: '590'
+          value: '1600'
         },
         {
           name: '120mm 3BK18M - HEATFS',
-          value: '490'
+          value: '1300'
         }
       ]
       DDFV.options = types
@@ -93,6 +102,12 @@ export default {
 .DistanceCalcDiv {
   background-color: gray;
   Margin: 5% 10% 5% 10%;
+}
+
+#demoDiv {
+  margin:2% 5% 2% 5% ;
+  justify-content: center;
+  background-color: black;
 }
 
 h3 {
