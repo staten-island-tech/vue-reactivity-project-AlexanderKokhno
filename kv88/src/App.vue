@@ -2,18 +2,21 @@
   <div id="app">
     <HeaderComp/>
     <DistanceCalc/>
+    <InfoComp/>
   </div>
 </template>
 
 <script>
 import HeaderComp from './components/HeaderComp.vue'
 import DistanceCalc from './components/DistanceCalc.vue'
+import InfoComp from './components/InfoComp.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderComp,
-    DistanceCalc
+    DistanceCalc,
+    InfoComp
   }
 }
 </script>
