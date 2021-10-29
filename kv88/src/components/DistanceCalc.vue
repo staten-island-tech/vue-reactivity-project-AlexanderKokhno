@@ -50,8 +50,8 @@ export default {
       // ['152mm G-530 - The Anti-Concrete', '88mm (PzGr 39/43) - APCBC', '128mm 12,8/8,8 Pzgr.TS - APCBC', '120mm T14E3 - APCBC', '120mm DM43 - APFSDS', '120mm 3BK18M - HEATFS'
       // ],
       // gei_kv2_ac: document.getElementById('KV_AC')
-      options: [],
-      selected: ''
+      options: ['152mm G-530 - The Anti-Concrete'],
+      selected: '400'
     }
   },
   methods: {
@@ -93,6 +93,9 @@ export default {
     testfunc1: function () {
       console.log(this.STA1[1])
     }
+  },
+  created: function () {
+    this.dropDown()
   }
 }
 </script>
