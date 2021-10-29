@@ -29,7 +29,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  background-image:url('https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif');
+  background-image:url('./assets/KV-2_abandoned.jpg');
   background-repeat:repeat;
   height: 100rem;
 }

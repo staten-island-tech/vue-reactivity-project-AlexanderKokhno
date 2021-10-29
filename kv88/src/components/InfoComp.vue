@@ -1,5 +1,6 @@
 <template>
     <div class="InfoDiv">
+      <h2>Information</h2>
         <div class="roundType">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
             </p>
@@ -39,9 +40,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.DistanceCalcDiv {
+.InfoDiv {
   background-color: gray;
   Margin: 5% 10% 5% 10%;
+  padding:2% 2% 2% 2% ;
+}
+
+.roundType {
+  margin:2% 5% 2% 5% ;
+  justify-content: center;
+  padding:2% 5% 2% 5% ;
+  height: auto;
+  background-color: lightgray;
 }
 
 #demoDiv {
@@ -63,5 +73,8 @@ li {
 }
 a {
   color: #42b983;
+}
+h2 {
+  text-decoration: underline;
 }
 </style>

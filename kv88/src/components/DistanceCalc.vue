@@ -1,8 +1,8 @@
 <template>
     <div class="DistanceCalcDiv">
         <div class="roundType">
-            <p>Select Round (mm)(name)(type)
-            </p>
+            <h2>Select Round (mm)(name)(type)
+            </h2>
             <!-- <form>
                 <select name="ShellDPn" id="ShellDPn" v-on:change="Calc_Distance" >
                     <option id="PLCH" selected>Select Shell Type Here</option>
@@ -52,6 +52,8 @@ export default {
       // gei_kv2_ac: document.getElementById('KV_AC')
       options: ['152mm G-530 - The Anti-Concrete'],
       selected: '400'
+      InfoSelected
+      https://www.smashingmagazine.com/2020/01/data-components-vue-js/
     }
   },
   methods: {
@@ -105,6 +107,7 @@ export default {
 .DistanceCalcDiv {
   background-color: gray;
   Margin: 5% 10% 5% 10%;
+  padding:2% 2% 2% 2% ;
 }
 
 #demoDiv {
