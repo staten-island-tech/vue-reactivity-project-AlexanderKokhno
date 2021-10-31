@@ -14,7 +14,7 @@
                     <option value="MLm4" id="ML_MU4">{{STA1[5]}}</option>
                 </select>
             </form> -->
-            <div>
+            <div id="inputL">
               <button @click="dropDown">Calculate</button>
               <select v-model="selected" class="form-control sl">
               <option v-for="option in options" :value="option.value" :key="option.value">{{ option.name }}</option>
@@ -22,16 +22,14 @@
             </div>
             <!-- <button v-on:click="Calc_Distance" id="Calc_Btn">Calculate2</button> -->
         </div>
-        <div id="demoDiv">
-          <img alt="Vue logo" id="DDKV" v-if="selected === '400'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
-          <img alt="Vue logo" id="DDKT" v-else-if="selected === '1000'" Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
-          <img alt="Vue logo" id="DDSP" v-else-if="selected === '1100'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
-          <img alt="Vue logo" id="DDT34" v-else-if="selected === '950'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
-          <img alt="Vue logo" id="DDPL" v-else-if="selected === '1600'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
-          <img alt="Vue logo" id="DDT80" v-else-if="selected === '1300'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+        <div class="angleInput">
+          <h2>Input Angle (Assume ground is unangled)</h2>
+          <div id="inputL">
+            <input type="number" id="IANi" name="IANn" min='-90' max='90' v-model="angle"><br>
+          </div>
         </div>
-
     </div>
+
 </template>
 
 <script>
@@ -46,18 +44,20 @@ export default {
       testvar2: 5.5,
       testvar3: 6.43442,
       distance: 0,
+      angle: 1,
       // STA1:
       // ['152mm G-530 - The Anti-Concrete', '88mm (PzGr 39/43) - APCBC', '128mm 12,8/8,8 Pzgr.TS - APCBC', '120mm T14E3 - APCBC', '120mm DM43 - APFSDS', '120mm 3BK18M - HEATFS'
       // ],
       // gei_kv2_ac: document.getElementById('KV_AC')
       options: ['152mm G-530 - The Anti-Concrete'],
       selected: '400'
-      InfoSelected
-      https://www.smashingmagazine.com/2020/01/data-components-vue-js/
+      // InfoSelected
+      // https://www.smashingmagazine.com/2020/01/data-components-vue-js/
     }
   },
   methods: {
     dropDown: function () {
+      console.log(this.angle)
       var DDFV = this
       var types = [
         {
@@ -91,10 +91,12 @@ export default {
     Calc_Distance: function () {
       this.testvar1 *= 1.34
       console.log(this.distance)
-    },
-    testfunc1: function () {
-      console.log(this.STA1[1])
     }
+    // IANf: function () {
+    //   this.angle = document.getElementById('IANi').value
+    //   console.log(this.angle)
+    //   console.log('fnewinfrudne')
+    // },
   },
   created: function () {
     this.dropDown()
@@ -110,10 +112,22 @@ export default {
   padding:2% 2% 2% 2% ;
 }
 
-#demoDiv {
+.demoDiv {
   margin:2% 5% 2% 5% ;
   justify-content: center;
   background-color: black;
+}
+
+.angleInput{
+  margin:2% 5% 2% 5% ;
+  justify-content: center;
+  background-color: gray;
+}
+
+#inputL {
+  background-color: lightgray;
+  Margin: 5% 10% 5% 10%;
+  padding:2% 2% 2% 2% ;
 }
 
 h3 {
