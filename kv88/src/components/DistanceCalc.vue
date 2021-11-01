@@ -1,6 +1,6 @@
 <template>
     <div class="DistanceCalcDiv">
-        <div class="roundType">
+        <div class="roundType" id="DCIs">
             <h2>Select Round (mm)(name)(type)
             </h2>
             <!-- <form>
@@ -22,11 +22,14 @@
             </div>
             <!-- <button v-on:click="Calc_Distance" id="Calc_Btn">Calculate2</button> -->
         </div>
-        <div class="angleInput">
-          <h2>Input Angle (Assume ground is unangled)</h2>
+        <div class="distanceInput" id="DCIs">
+          <h2>Distance the Round Traveled (meters)</h2>
           <div id="inputL">
             <input type="number" id="IANi" name="IANn" min='-90' max='90' v-model="angle"><br>
           </div>
+        </div>
+        <div class="penAtDisOutput" id="DCIs">
+          <h2>[ignrngnv]mm</h2>
         </div>
     </div>
 
@@ -51,8 +54,6 @@ export default {
       // gei_kv2_ac: document.getElementById('KV_AC')
       options: ['152mm G-530 - The Anti-Concrete'],
       selected: '400'
-      // InfoSelected
-      // https://www.smashingmagazine.com/2020/01/data-components-vue-js/
     }
   },
   methods: {
@@ -106,7 +107,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.DistanceCalcDiv {
+#DCIs {
   background-color: gray;
   Margin: 5% 10% 5% 10%;
   padding:2% 2% 2% 2% ;
@@ -118,11 +119,11 @@ export default {
   background-color: black;
 }
 
-.angleInput{
+/* .angleInput{
   margin:2% 5% 2% 5% ;
   justify-content: center;
   background-color: gray;
-}
+} */
 
 #inputL {
   background-color: lightgray;
