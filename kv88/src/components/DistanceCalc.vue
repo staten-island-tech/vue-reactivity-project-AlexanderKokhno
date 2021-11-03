@@ -15,12 +15,11 @@
                 </select>
             </form> -->
             <div id="inputL">
-              <button @click="dropDown">Calculate</button>
+              <button @click="CalculatePen">Calculate</button>
               <select v-model="selected" class="form-control sl">
               <option v-for="option in options" :value="option.value" :key="option.value">{{ option.name }}</option>
               </select>
             </div>
-            <!-- <button v-on:click="Calc_Distance" id="Calc_Btn">Calculate2</button> -->
         </div>
         <div class="distanceInput" id="DCIs">
           <h2>Distance the Round Traveled (meters)</h2>
@@ -29,7 +28,7 @@
           </div>
         </div>
         <div class="penAtDisOutput" id="DCIs">
-          <h2>[ignrngnv]mm</h2>
+          <h2>{{PEN}}mm</h2>
         </div>
     </div>
 
@@ -48,12 +47,9 @@ export default {
       testvar3: 6.43442,
       distance: 0,
       angle: 1,
-      // STA1:
-      // ['152mm G-530 - The Anti-Concrete', '88mm (PzGr 39/43) - APCBC', '128mm 12,8/8,8 Pzgr.TS - APCBC', '120mm T14E3 - APCBC', '120mm DM43 - APFSDS', '120mm 3BK18M - HEATFS'
-      // ],
-      // gei_kv2_ac: document.getElementById('KV_AC')
       options: ['152mm G-530 - The Anti-Concrete'],
-      selected: '400'
+      selected: '400',
+      PEN: 0
     }
   },
   methods: {
@@ -89,15 +85,10 @@ export default {
       DDFV.options = types
       console.log(DDFV.selected)
     },
-    Calc_Distance: function () {
-      this.testvar1 *= 1.34
-      console.log(this.distance)
+    CalculatePen: function () {
+      console.log(this.selected * 3)
+      this.PEN = this.selected * this.angle
     }
-    // IANf: function () {
-    //   this.angle = document.getElementById('IANi').value
-    //   console.log(this.angle)
-    //   console.log('fnewinfrudne')
-    // },
   },
   created: function () {
     this.dropDown()

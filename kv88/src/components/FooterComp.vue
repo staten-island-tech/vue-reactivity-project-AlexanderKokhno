@@ -17,7 +17,7 @@ export default {
 <style scoped>
 .FooterCompDiv {
   padding:2% 2% 2% 2% ;
-  position:sticky;
+  position:relative;
   bottom: 0;
   width: 100%;
   background-color: black;
