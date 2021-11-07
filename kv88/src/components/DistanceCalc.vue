@@ -38,13 +38,13 @@
           </div>
             <div id="infoGifDiv">
             <div v-if="selected === '530'" class="DDKV" id="INFODIV">
-              <img alt="Vue logo" class="imKV" id="INFOPIC" v-if="selected === '400'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+              <img alt="Vue logo" class="imKV" id="INFOPIC" v-if="selected === '530'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
             </div>
             <div class="DDKT" v-else-if="selected === '1000'" id="INFODIV">
               <img alt="Vue logo" class="imKT" id="INFOPIC"  Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
             </div>
               <div class="DDMAUS" id="INFODIV" v-else-if="selected === '1230'">
-              <img alt="Vue logo" class="imMAUS" id="INFOPIC"  Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
+              <img alt="Vue logo" class="imMAUS" id="INFOPIC"  Src="">
             </div>
           </div>
         </div>
@@ -65,8 +65,8 @@ export default {
       testvar3: 6.43442,
       distance: 1,
       angle: 1,
-      options: ['152mm G-530 - The Anti-Concrete'],
-      selected: '530',
+      options: ['128mm 12,8/8,8 Pzgr.TS - APCBC'],
+      selected: '1230',
       PEN: 0
     }
   },
