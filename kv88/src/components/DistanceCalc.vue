@@ -33,18 +33,37 @@
         <div class = "RoundInfo" id="DCIs">
           <h2>Information</h2>
           <div class="roundType">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
-            </p>
           </div>
             <div id="infoGifDiv">
             <div v-if="selected === '530'" class="DDKV" id="INFODIV">
-              <img alt="Vue logo" class="imKV" id="INFOPIC" v-if="selected === '530'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+              <img alt="Vue logo" class="imKV" id="INFOPIC" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
+            </p>
             </div>
             <div class="DDKT" v-else-if="selected === '1000'" id="INFODIV">
               <img alt="Vue logo" class="imKT" id="INFOPIC"  Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
+            </p>
             </div>
-              <div class="DDMAUS" id="INFODIV" v-else-if="selected === '1230'">
-              <img alt="Vue logo" class="imMAUS" id="INFOPIC"  Src="">
+            <div class="DDMAUS" id="INFODIV" v-else-if="selected === '1230'">
+              <img alt="Vue logo" class="imMAUS" id="INFOPIC"  Src="https://media1.giphy.com/media/Y2Pe0rZqu6NaU2Iec1/giphy.gif">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
+            </p>
+            </div>
+            <div v-if="selected === '960'" class="DDUST34" id="INFODIV">
+              <img alt="Vue logo" class="imUST34" id="INFOPIC" Src="https://thumbs.gfycat.com/ImmaterialAbandonedHermitcrab-max-1mb.gif">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
+            </p>
+            </div>
+            <div v-if="selected === '1660'" class="DDLEO" id="INFODIV">
+              <img alt="Vue logo" class="imLEO" id="INFOPIC"  Src="https://thumbs.gfycat.com/PlayfulConfusedArmadillo-max-1mb.gif">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
+            </p>
+            </div>
+            <div v-if="selected === '950'" class="DDT80" id="INFODIV">
+              <img alt="Vue logo" class="imT80" id="INFOPIC" Src="https://78.media.tumblr.com/4c7fbba51be362743c5c44b77109ec0f/tumblr_nl7wsbs2Ho1t382eqo4_500.gif">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
+            </p>
             </div>
           </div>
         </div>
@@ -156,6 +175,26 @@ export default {
   background-color: lightgray;
   Margin: 5% 10% 5% 10%;
   padding:2% 2% 2% 2% ;
+}
+
+.InfoDiv {
+  background-color: gray;
+  Margin: 5% 10% 5% 10%;
+  padding:2% 2% 2% 2% ;
+}
+
+#INFODIV {
+  margin:2% 5% 2% 5% ;
+  justify-content: center;
+  padding:2% 5% 2% 5% ;
+  height: auto;
+  background-color: lightgray;
+}
+
+#demoDiv {
+  margin:2% 5% 2% 5% ;
+  justify-content: center;
+  background-color: black;
 }
 
 h3 {

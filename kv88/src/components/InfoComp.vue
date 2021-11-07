@@ -1,6 +1,6 @@
 <template>
     <div class="InfoDiv">
-      <h2>Information</h2>
+      <h2>Adittional Information</h2>
         <div class="roundType">
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
             </p>
