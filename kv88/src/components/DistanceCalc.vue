@@ -24,11 +24,29 @@
         <div class="distanceInput" id="DCIs">
           <h2>Distance the Round Traveled (meters)</h2>
           <div id="inputL">
-            <input type="number" id="IANi" name="IANn" min='-90' max='90' v-model="angle"><br>
+            <input type="number" id="IANi" name="IANn" min='0' v-model="distance"><br>
           </div>
         </div>
         <div class="penAtDisOutput" id="DCIs">
           <h2>{{PEN}}mm</h2>
+        </div>
+        <div class = "RoundInfo" id="DCIs">
+          <h2>Information</h2>
+          <div class="roundType">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta architecto et, distinctio adipisci ducimus delectus explicabo non minus nisi aliquid tenetur. Incidunt deleniti provident cumque. Architecto nisi quia minus nemo!
+            </p>
+          </div>
+            <div id="infoGifDiv">
+            <div v-if="selected === '530'" class="DDKV" id="INFODIV">
+              <img alt="Vue logo" class="imKV" id="INFOPIC" v-if="selected === '400'" Src="https://c.tenor.com/Swr_VRFiVvYAAAAC/tanks-cartoon.gif">
+            </div>
+            <div class="DDKT" v-else-if="selected === '1000'" id="INFODIV">
+              <img alt="Vue logo" class="imKT" id="INFOPIC"  Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
+            </div>
+              <div class="DDMAUS" id="INFODIV" v-else-if="selected === '1230'">
+              <img alt="Vue logo" class="imMAUS" id="INFOPIC"  Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
+            </div>
+          </div>
         </div>
     </div>
 
@@ -45,10 +63,10 @@ export default {
       testvar1: 5,
       testvar2: 5.5,
       testvar3: 6.43442,
-      distance: 0,
+      distance: 1,
       angle: 1,
       options: ['152mm G-530 - The Anti-Concrete'],
-      selected: '400',
+      selected: '530',
       PEN: 0
     }
   },
@@ -59,7 +77,7 @@ export default {
       var types = [
         {
           name: '152mm G-530 - The Anti-Concrete',
-          value: '400'
+          value: '530'
         },
         {
           name: '88mm (PzGr 39/43) - APCBC',
@@ -67,28 +85,46 @@ export default {
         },
         {
           name: '128mm 12,8/8,8 Pzgr.TS - APCBC',
-          value: '1100'
+          value: '1230'
         },
         {
           name: '120mm T14E3 - APCBC',
-          value: '950'
+          value: '960'
         },
         {
           name: '120mm DM43 - APFSDS',
-          value: '1600'
+          value: '1660'
         },
         {
           name: '120mm 3BK18M - HEATFS',
-          value: '1300'
+          value: '950'
         }
       ]
       DDFV.options = types
       console.log(DDFV.selected)
     },
     CalculatePen: function () {
-      console.log(this.selected * 3)
-      this.PEN = this.selected * this.angle
+      if (this.selected === '530') {
+        this.PEN = (((this.distance * this.distance) * 61) / 73010000) - ((92511 * this.distance) / 7301000) + (1389039 / 14602)
+      } else if (this.selected === '1000') {
+        this.PEN = (((this.distance * this.distance) * 8) / 4563125) - ((57507 * this.distance) / 1825250) + (1732636 / 7301)
+      } else if (this.selected === '1230') {
+        this.PEN = (((this.distance * this.distance) * 293) / 73010000) - ((372543 * this.distance) / 7301000) + (4563269 / 14602)
+      } else if (this.selected === '960') {
+        this.PEN = (((this.distance * this.distance) * 69) / 36505000) - ((152519 * this.distance) / 3650500) + (2069232 / 7301)
+      } else if (this.selected === '1660') {
+        this.PEN = (((this.distance * this.distance) * 57) / 36505000) - ((62507 * this.distance) / 3650500) + (3914585 / 7301)
+      } else if (this.selected === '950') {
+        this.PEN = (950)
+      } else {
+        alert('Something went wrong. Either the Round doesnt have a parabula equation or there is a code error')
+      }
     }
+    // CalculatePenKV: function () {
+    //   console.log(this.selected * 3)
+    //   // this.PEN = this.selected * this.angle
+    //   this.PEN = (((this.distance * this.distance) * 61) / 73010000) - ((92511 * this.distance) / 7301000) + (1389039 / 14602)
+    // }
   },
   created: function () {
     this.dropDown()

@@ -17,7 +17,6 @@
             <img alt="Vue logo" id="DDKT"  Src="https://i.pinimg.com/originals/ea/97/89/ea978942986c010e36bb11aa7e9bec14.gif">
           </div> -->
         </div>
-
     </div>
 </template>
 
