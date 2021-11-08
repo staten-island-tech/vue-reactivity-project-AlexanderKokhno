@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="penAtDisOutput" id="DCIs">
-          <h2>{{PEN}}mm</h2>
+          <h2>Round can penetrate {{PEN}}mm of unsloped armour.</h2>
         </div>
         <div class = "RoundInfo" id="DCIs">
           <h2>Information</h2>
