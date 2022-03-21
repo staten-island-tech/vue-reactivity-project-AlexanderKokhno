@@ -118,6 +118,12 @@ export default {
           name: '120mm 3BK18M - HEATFS',
           value: '950'
         }
+        {
+          name:'76.2mm Tea - APDS'
+          value:'428261482'
+
+
+        }
       ]
       DDFV.options = types
       console.log(DDFV.selected)
